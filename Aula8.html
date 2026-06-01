@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Meu JS</title>
+    </head>
+    <body>
+        <h1 id="titulo">Bem-vindo</h1>
+        <p>67</p>
+        <button>resenha</button>
+        <script>
+            document.getElementById("titulo").textContent = "Novo Título"; 
+            let paragrafo = document.querySelector("p");
+            paragrafo.style.backgroundColor = "blue";
+            let butao = document.querySelector("button");
+            butao.classList.add("but");
+
+        </script>
+
+        <style>
+            .but{
+                background-color:black;
+                height: 20px;
+                width: 200px;
+                color:blueviolet;
+                
+            }
+        </style>
+    </body>
+</html>
