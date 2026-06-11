@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Meu JS</title>
+    </head>
+    <body>
+        <h1>Bem-vindo</h1>
+
+        <script>
+
+        /* 1. Explique a diferença entre escopo de função e de bloco.
+            Escopo de função se refere ao escopo que uma função abrange e
+            escopo de bloco se refere ao escopo de blocos com if, for e while.
+        */
+
+        /*2. Analise o código a seguir e diga o que será impresso:
+        undefined
+        2
+        */
+
+            var x = 1; 
+
+            function teste() { 
+            console.log(x); 
+            var x = 2; 
+            console.log(x); 
+            } 
+
+            teste(); 
+
+        /* 3. Reescreva o seguinte código com let para evitar problemas de hoisting: */ 
+            function exemplo() { 
+            if (true) { 
+            let nome = "Ana"; 
+            } 
+            console.log(nome); 
+            }
+
+            exemplo();
+            
+        /* 4. Desafio: explique por que o código abaixo imprime 3, 3, 3 e como corrigir:
+            ocorre por causa do escopo da variavel, so utilizar let.
+        */
+            for (let i = 0; i < 3; i++) { 
+            setTimeout(() => console.log(i), 100); 
+            } 
+        </script>
+
+    </body>
+</html>

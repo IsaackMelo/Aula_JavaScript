@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Meu JS</title>
+    </head>
+    <body>
+        <h1 id="titulo">Bem-vindo</h1>
+        <p id="one">67</p>
+        <button id="botao">resenha</button>
+        <br>
+        <br>
+        <input id="inp" type="text">
+        <p id="two"></p>
+        <img src="/img/stay hard.jpg" id="img">
+
+        <script>
+            
+            document.querySelector("#botao").addEventListener("click", function() { 
+            let paragrafo = document.querySelector("#one");
+            paragrafo.textContent = "blue"; 
+            }); 
+
+            document.querySelector("#inp").addEventListener("input", function(e) { 
+            let par = document.querySelector("#two");
+            par.textContent = e.target.value; 
+            }); 
+
+            document.querySelector("#img").addEventListener("mouseover", function () {
+                let imagem = document.querySelector("#img");
+                imagem.style.border= "3px black solid" ;               
+            })
+
+
+
+        </script>
+
+    </body>
+</html>
