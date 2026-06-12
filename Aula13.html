@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Meu JS</title>
+    </head>
+    <body>
+        <script>
+            function executarDuasVezes(fn) {
+                fn();
+                fn();
+             }
+             executarDuasVezes(() => console.log("Função executada"));
+
+             function criarSaudacao(saudacao) {
+                return function(nome)
+                {
+                    console.log( saudacao + " " + nome + "!");
+                };
+             }
+            const saudar = criarSaudacao("muitos seis e setes");
+            console.log(saudar("igor"));
+
+            function calcular(n1, n2) {
+                function somar() {
+                    return n1 + n2;
+                }
+            return somar();
+        }
+            const resultado = calcular(2, 3);
+            console.log(resultado);
+
+            function compose(f, g) {
+                return function (x){
+                }
+                return f(g(x));
+            }
+        </script>
+    </body>
+</html>
