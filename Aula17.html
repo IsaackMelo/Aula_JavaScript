@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Meu JS</title>
+    </head>
+    <body>
+        <script>
+            const aluno = {nome: "roberto", idade: 67, curso: "pedologia"};
+
+            const json = JSON.stringify(aluno);
+            console.log(json);
+
+            const sting = '{"jogo":"tigrinho","plataforma":"42","ano":2002}';
+
+            const objeto = JSON.parse(sting);
+            console.log(objeto.jogo);
+
+            const pedido = {produto: "bala baiana", quantidade: 1, valor: 2.00};
+
+            fetch("https://api.exemplo.com/pedidos", {
+                method: "POST",
+                headers: { 
+                    "Content-Type": "application/json" 
+                },
+                body: JSON.stringify(pedido)
+            });
+            
+        </script>
+    </body>
+</html> 

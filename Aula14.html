@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Meu JS</title>
+    </head>
+    <body>
+        <script>
+            const numeros = [1, 2, 3];
+            const quadrado = numeros.map(n => n*n);
+            console.log(quadrado);
+
+            const nomes = ['João', 'Fernanda', 'Carlos', 'Eva']; 
+            const cinco = nomes.filter(n => n.length > 5);
+            console.log(cinco);
+
+            const precos = [10.5, 22.3, 18.4]; 
+            const soma = precos.reduce((acumulador, atual) => acumulador + atual, 0); 
+            console.log(soma);
+            
+            const carrinho = [ 
+            { nome: 'Camiseta', preco: 29.99 }, 
+            { nome: 'Calça', preco: 89.9 }, 
+            { nome: 'Meias', preco: 9.99 } 
+            ];  
+            const total = carrinho.reduce((acumulador, atual) => acumulador + atual.preco, 0);
+            console.log(total); 
+        </script>
+    </body>
+</html>

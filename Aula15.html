@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Meu JS</title>
+    </head>
+    <body>
+        <script>
+            setTimeout(() => { 
+            console.log("ola, mundo"); 
+            }, 1500);
+
+            let contador = 0; 
+            const intervalo = setInterval(() => { 
+            console.log("Contador:", ++contador); 
+            if (contador === 10) clearInterval(intervalo); 
+            }, 1000); 
+        
+            let conta = 0; 
+            let inter = null; 
+
+            function iniciar() {
+                
+                if (inter === null) {
+                    inter = setInterval(() => { 
+                        console.log("Contador:", ++conta); 
+                        
+                        
+                        if (contador === 5) {
+                            parar();
+                        }
+                    }, 1000);
+                }
+            }
+
+            function parar() {
+                if (inter !== null) {
+                    clearInterval(inter); 
+                    inter = null; 
+                }
+            }
+
+            iniciar();
+
+            let s = 0, m = 0;
+
+            function iniciarCronometro() {
+                setInterval(() => {
+                    if (++s === 60) { s = 0; m++; }
+                    console.log(`Tempo: ${m}:${s}`);
+                }, 1000);
+            }
+
+            iniciarCronometro();
+        </script>
+    </body>
+</html> 

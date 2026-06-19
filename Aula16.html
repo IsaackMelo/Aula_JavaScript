@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Meu JS</title>
+    </head>
+    <body>
+        <script>
+            const promise = new Promise((resolve) => {
+                setTimeout(() => resolve("67"), 3000);
+            });
+
+            promise.then(msg => console.log(msg));
+
+            const tres = () => new Promise(res => setTimeout(res, 3000));
+
+            async function barbie() {
+                await tres();
+                console.log("67");
+            }
+
+            barbie();
+
+            function req(dado) {
+                return new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        if (dado) resolve("reapper");
+                        else reject("ripe não");
+                    }, 2000);
+                });
+        }
+
+            async function date() {
+                try {
+                    const resultado = await req(true);
+                    console.log(resultado);
+                } catch (erro) {
+                    console.error(erro);
+            }
+        }
+
+            date();
+        </script>
+    </body>
+</html> 
